@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adminmaster.master.cs" Inherits="MedicalStore.Views.Admin.adminmaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/fontawesome.min.css" />
+    <style>
+        .nav-link {
+            color: deepskyblue;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand {
+            color: black;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .navbar-toggler:focus,
+        .navbar-toggler:active {
+            outline: none;
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .navbar-nav .nav-item:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ff4081;
+        }
+
+        .footer {
+            background-color: #1a1a1a;
+            padding: 20px;
+            color: #ffffff;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            color: #ffffff;
+            margin-right: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #ff4081;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wrapper {
+            flex: 1;
+        }
+
+        .footer {
+            flex-shrink: 0;
+        }
+
+        .nav-link {
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav-link i {
+            display: block;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../Home" style="font-weight: 700;" >ONLINEPHARMA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Medicines.aspx" style="font-weight: 400;"><i class="fas fa-pills"></i> Medicines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Category.aspx" style="font-weight: 400;"><i class="fas fa-list-alt"></i> Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Client.aspx" style="font-weight: 400;"><i class="fas fa-users"></i> Clients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Login.aspx" style="font-weight: 400; " ><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="Mybody" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>OnlinePharma &copy; 2023. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>
+
